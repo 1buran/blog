@@ -2,3 +2,7 @@ baseURL = '/'
 languageCode = 'en-us'
 title = 'Dev blog'
 theme = 'hermit-v2'
+
+[markup]
+  [markup.highlight]
+  style = 'nord'
