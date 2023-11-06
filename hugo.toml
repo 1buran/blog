@@ -6,3 +6,21 @@ theme = 'hermit-v2'
 [markup]
   [markup.highlight]
   style = 'nord'
+
+[params]
+  [[params.socialLinks]]
+    name = "github"
+    url = "https://github.com/mrBuran/"
+  [[params.socialLinks]]
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/buran-py/"
+
+[menu]
+  [[menu.main]]
+    name = "Posts"
+    url = "posts/"
+    weight = 10
+  [[menu.main]]
+    name = "About"
+    url = "about/"
+    weight = 20
