@@ -1,13 +1,18 @@
 baseURL = '/'
 languageCode = 'en-us'
-title = 'Dev blog'
+title = 'The Night Coder Blog'
 theme = 'hermit-v2'
+
+[author]
+  name = "Buran"
+  about = "about"
 
 [markup]
   [markup.highlight]
   style = 'nord'
 
 [params]
+
   [[params.socialLinks]]
     name = "github"
     url = "https://github.com/mrBuran/"
