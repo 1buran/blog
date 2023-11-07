@@ -285,7 +285,7 @@ Ok, previously we had created all parts of our program, it's time to run it!
 
 Run `go install` for create `updemacs` binary file, assuming that you already have `$(go env GOPATH)/bin` in `$PATH` env, if update is available you will see something like this:
 
-![](/images/2023-11-05-235956.png)
+{{< figure src="/images/2023-11-05-235956.png"  caption="Example of run updemacs" >}}
 
 # Conclusion
 
