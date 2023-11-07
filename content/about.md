@@ -28,7 +28,7 @@ GitLab
 # Proficiencies
 
 Sys admin
-: system configuration(server setup & perfomance tuning), health monitoring(Nagios, Icinga, Collectd, RrrdTool, MRTG, Grafana), backups(Bacula, BackupPC, borg), Ansible, shell scripting
+: system configuration(server setup & performance tuning), health monitoring(Nagios, Icinga, Collectd, RrrdTool, MRTG, Grafana), backups(Bacula, BackupPC, borg), Ansible, shell scripting
 
 Programming
 : Python(expert), Golang(middle, wanna switch to it), JS(good knowledge), Perl(currently not used), bash/shell scripting(very experienced)
@@ -92,10 +92,10 @@ Web frameworks
 ## JavaScript
 
 JS frameworks
-: React(currently used in many projects), Svelte(pet projects), Vue.JS(not used, latest usage some years ago), jQuery(not used, latest usage some years ago), Backbone.JS(not used, latest usage some years ago), AngularJS(not used, latest usage some years ago)
+: React, Svelte(pet projects), used some years ago: Vue.JS, jQuery, Backbone.JS, AngularJS
 
 Other
-: Redux, ES6, Webpack, Moment.js, Nunjucks, Select2
+: Redux, Lit, ES6, Webpack, Moment.js, Nunjucks, Select2
 
 ## CSS
 
@@ -103,4 +103,4 @@ Fundamentals
 : Felxbox, CSS Grid, clamp()
 
 Other
-: Bootstrap(used in many projects), Bulma(per projects), Semantic UI(rare usage), Kube(per projects), Pure CSS(pet projects), Tailwind CSS(wanna taste)
+: Bootstrap(used in many projects), Bulma(pet projects), Semantic UI(rare usage), Kube(pet projects), Pure CSS(pet projects), Tailwind CSS(wanna taste)
