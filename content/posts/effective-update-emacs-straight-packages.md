@@ -275,7 +275,9 @@ func main() {
 }
 ```
 
-WARNING: Actually this is not good approach the run as many processes for update the git repos as you have repos, but it's not be araising the  Disk I/O Wait catostrafically for hundreds repos, on SSD.
+{{< admonition warning >}}
+Actually this is not good approach the run as many processes for update the git repos as you have repos, but it's not be araising the  Disk I/O Wait catostrafically for hundreds repos, on SSD.
+{{< /admonition >}}
 
 ## Run the concurrent update
 
