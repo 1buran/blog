@@ -297,6 +297,11 @@ if you ran many times the utility you might notice a mess in the output like thi
 git repository log messages are mixed up: messages from one repo are displayed in the log of another and vice verse.
 
 This is because we used shared buffer, and more than one goroutine may write to this buffer.
+
+> Do not communicate by sharing memory; instead, share memory by communicating.
+
+Do you remember that? This is it.
+
 So the fix is to use go channels or just return back a full string of git log messages for repo.
 Let's do the second, here are the changes:
 
@@ -358,8 +363,10 @@ modified   golang/updemacs/main.go
 
 
 # Conclusion
+Now we have known why we should follow the one most of very important principle/concept of Golang:
+> Do not communicate by sharing memory; instead, share memory by communicating.
 
-We have learned how to update installed Emacs Straight packages in more effective way,
+Also we've learned how to update installed Emacs Straight packages in more effective way,
 without waiting for this feature to be available in Emacs/Straight.
 
 Feel the power of concurrency: the time of execution of check for update of ~100 repositories, on my laptop (i7-8550U CPU @ 1.80GHz, RAM 16 GB DDR4 2400, SSD NVMe 256 GB), takes ~2 seconds!
