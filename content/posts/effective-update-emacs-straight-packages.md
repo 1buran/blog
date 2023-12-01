@@ -287,6 +287,76 @@ Run `go install` for create `updemacs` binary file, assuming that you already ha
 
 {{< figure src="/images/2023-11-05-235956.png"  caption="Example of run updemacs" >}}
 
+## The bug
+
+Previous we saw that the idea works, but actually an implementation has a bug,
+if you ran many times the utility you might notice a mess in the output like this:
+
+{{< figure src="/images/2023-11-29-185853.png"  caption="Example of run updemacs" >}}
+
+git repository log messages are mixed up: messages from one repo are displayed in the log of another and vice verse.
+
+This is because we used shared buffer, and more than one goroutine may write to this buffer.
+So the fix is to use go channels or just return back a full string of git log messages for repo.
+Let's do the second, here are the changes:
+
+```diff
+modified   golang/updemacs/main.go
+@@ -62,13 +62,15 @@ func PullGitChanges(r *git.Repository) (bool, error) {
+
+ // Print git log to buffer, inspect commits since given time,
+ // count the number of commits and save to n
+-func PrintGitLog(r *git.Repository, ref *plumbing.Reference, buf *strings.Builder, n *int) error {
++func GetGitLog(r *git.Repository, ref *plumbing.Reference, n *int) (string, error) {
+ 	// KLUDGE use LogOptions.From doesn't work, use alternative method LogOptions.Since instead
+ 	// cIter, err := r.Log(&git.LogOptions{From: tag.Hash(), Order: git.LogOrderDFSPost})
+
++	var buf strings.Builder
++
+ 	c, err := r.CommitObject(ref.Hash())
+ 	if err != nil {
+-		return err
++		return "", err
+ 	}
+
+ 	// KLUDGE hide the Updated.At tagged commit, show only after it
+@@ -91,10 +93,9 @@ func PrintGitLog(r *git.Repository, ref *plumbing.Reference, buf *strings.Builde
+ 		}
+ 	}(n)
+ 	err = cIter.ForEach(f)
+-	return err
++	return buf.String(), err
+ }
+
+-var buf strings.Builder
+ var restartEmacsIsNeeded bool
+
+ func UpdateEmacsStraightRepo(p string, wg *sync.WaitGroup) {
+@@ -125,16 +126,18 @@ func UpdateEmacsStraightRepo(p string, wg *sync.WaitGroup) {
+ 		log.Fatal(err)
+ 	}
+
+-	var n int
+-	err = PrintGitLog(r, tag, &buf, &n)
++	var (
++		n int
++		l string
++	)
++	l, err = GetGitLog(r, tag, &n)
+
+ 	if n > 0 {
+ 		restartEmacsIsNeeded = true
+ 		color.Comment.Printf("Fetched from %s", rr.Config().URLs[0])
+ 		color.C256(214).Printf(" %d new commits\n", n)
+ 		color.C256(247).Printf("local path: %s\n", p)
+-		fmt.Print(buf.String())
+-		buf.Reset()
++		fmt.Print(l)
+ 	}
+ }
+```
+
+
 # Conclusion
 
 We have learned how to update installed Emacs Straight packages in more effective way,
