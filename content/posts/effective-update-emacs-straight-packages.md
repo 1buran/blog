@@ -292,7 +292,7 @@ Run `go install` for create `updemacs` binary file, assuming that you already ha
 Previous we saw that the idea works, but actually an implementation has a bug,
 if you ran many times the utility you might notice a mess in the output like this:
 
-{{< figure src="/images/2023-11-29-185853.png"  caption="Example of run updemacs" >}}
+{{< figure src="/images/2023-11-29-185853.png"  caption="Log messages are mixed up" >}}
 
 git repository log messages are mixed up: messages from one repo are displayed in the log of another and vice verse.
 
