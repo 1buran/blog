@@ -15,7 +15,7 @@ theme = 'hermit-v2'
 
   [[params.socialLinks]]
     name = "github"
-    url = "https://github.com/mrBuran/"
+    url = "https://github.com/1buran/"
   [[params.socialLinks]]
     name = "linkedin"
     url = "https://www.linkedin.com/in/buran-py/"

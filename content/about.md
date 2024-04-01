@@ -20,7 +20,7 @@ E-mail
 # GitHub/GitLab profiles
 
 GitHub
-: https://github.com/mrBuran
+: https://github.com/1buran
 
 GitLab
 : https://gitlab.com/bur4n
