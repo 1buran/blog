@@ -23,7 +23,7 @@ GitHub
 : https://github.com/1buran
 
 GitLab
-: https://gitlab.com/bur4n
+: https://gitlab.com/1buran
 
 # Proficiencies
 
