@@ -3,7 +3,7 @@ languageCode = 'en-us'
 title = 'The Night Coder Blog'
 theme = 'hermit-v2'
 
-[author]
+[params.author]
   name = "Buran"
   about = "about"
 
@@ -12,6 +12,10 @@ theme = 'hermit-v2'
   style = 'nord'
 
 [params]
+  dateform        = "Jan 2, 2006"
+  dateformShort   = "Jan 2"
+  dateformNum     = "2006-01-02"
+  dateformNumTime = "2006-01-02 15:04 -0700"
 
   [[params.socialLinks]]
     name = "github"
