@@ -1,7 +1,7 @@
 ---
 custom_css: ["/css/about.css"]
 ---
-Hello, I am Software Engineer with proficiency in Python, Golang, Docker, RDBMS, NoSQL, formerly worked as sysadmin, here is the full list of my skills.
+Hello, I am Software Engineer with proficiency in Python, Golang, Docker, RDBMS, NoSQL, formerly worked as sysadmin, below some highlights of my background.
 
 # Short legal info
 
@@ -47,7 +47,7 @@ Other
 ## Core of any projects
 
 RDBMS
-: PostgreSQL, MySQL, Sqlite 3
+: PostgreSQL, MySQL/MariaDB, Sqlite
 
 NoSQL
 : MongoDB, ElasticSearch, Redis, Memcached
@@ -84,10 +84,13 @@ Fundamentals:
 : Goroutines, channels, interfaces, generics, testing
 
 TUI
-: Bubble Tea(in plans, for pet project), gookit/color
+: bubbletea, lipgloss, termenv, gookit/color
 
 Web frameworks
 : Fiber
+
+Projects
+: [rHttp](https://github.com/1buran/rHttp)
 
 ## JavaScript
 
