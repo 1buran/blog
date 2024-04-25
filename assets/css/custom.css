@@ -1,6 +1,6 @@
 code:not([data-lang]) {
   padding: 2px 4px;
-  color: #00ffff;
+  color: #f4cccc;
 }
 .content a {
   box-shadow: none;
