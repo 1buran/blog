@@ -13,3 +13,9 @@ code:not([data-lang]) {
   text-underline-position: under;
   text-shadow: none;
 }
+
+pre,
+code,
+pre tt {
+  font-family: revert;
+}
