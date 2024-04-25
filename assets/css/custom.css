@@ -13,3 +13,14 @@ code:not([data-lang]) {
   text-underline-position: under;
   text-shadow: none;
 }
+
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital@0;1&family=Josefin+Slab:ital@0;1&family=Merriweather:ital@0;1&family=Noto+Sans:ital@0;1&family=Roboto:ital@0;1&display=swap");
+
+pre,
+code,
+pre tt {
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
