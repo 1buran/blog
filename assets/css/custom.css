@@ -2,9 +2,14 @@ code:not([data-lang]) {
   padding: 2px 4px;
   color: #f4cccc;
 }
-.content a {
+.footnotes {
+  color: #ccf2ff;
+}
+.content a,
+.footnotes a {
   box-shadow: none;
   color: #50b7e0;
+  text-decoration: none;
   padding: 0 2px;
 }
 .content a:is(:hover, :active) {
