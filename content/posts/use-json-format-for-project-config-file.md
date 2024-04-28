@@ -185,12 +185,7 @@ func defaultSettings(c *Config) error {
 }
 
 func overrideSettings(path, c *Config) error {
-	r, err := os.Open(path)
-	if err != nil {
-		return err
-	}
-
-	b, err := io.ReadAll(r)
+	b, err := os.ReadFile(path)
 	if err != nil {
 		return err
 	}
