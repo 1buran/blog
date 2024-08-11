@@ -166,7 +166,18 @@ bytes and decrypt them back to original strings.
 Ok, here is an example how it will look:
 
 ```go
-	tr1 := MoneyTransfer{ID: 123, Amount: 15000, CashPointAddress: "7001 E Belleview Ave, Denver, CO 80237, USA", ManagerBonus: "+$5.0 if processed less than 1 hour", Gateway: "MoneyGram", Sender: "John Doe", Recipient: "Jane Doe", Description: "Casio G Shock Retro 1986", Currency: "JPY", TransferCode: "L1K45M12XCBGAQ"}
+	tr1 := MoneyTransfer{
+        ID: 123,
+        Amount: 15000,
+        CashPointAddress: "7001 E Belleview Ave, Denver, CO 80237, USA",
+        ManagerBonus: "+$5.0 if processed less than 1 hour",
+        Gateway: "MoneyGram",
+        Sender: "John Doe",
+        Recipient: "Jane Doe",
+        Description: "Casio G Shock Retro 1986",
+        Currency: "JPY",
+        TransferCode: "L1K45M12XCBGAQ"
+    }
 
 	b, err := json.Marshal(tr1)
 	if err != nil {
@@ -187,11 +198,26 @@ Ok, here is an example how it will look:
 this code produces output:
 
 ```
-Plain text: main.MoneyTransfer{ID:123, Amount:15000, CashPointAddress:"7001 E Belleview Ave, Denver, CO 80237, USA", ManagerBonus:"+$5.0 if processed less than 1 hour", Gateway:"MoneyGram", Sender:"John Doe", Recipient:"Jane Doe", Description:"Casio G Shock Retro 1986", Currency:"JPY", TransferCode:"L1K45M12XCBGAQ"}
+Plain text: main.MoneyTransfer{ID:123, Amount:15000,
+CashPointAddress:"7001 E Belleview Ave, Denver, CO 80237, USA",
+ManagerBonus:"+$5.0 if processed less than 1 hour",
+Gateway:"MoneyGram", Sender:"John Doe", Recipient:"Jane Doe",
+Description:"Casio G Shock Retro 1986", Currency:"JPY", TransferCode:"L1K45M12XCBGAQ"}
 
-Marshaled JSON: {"ID":123,"Amount":15000,"CashPointAddress":"7001 E Belleview Ave, Denver, CO 80237, USA","ManagerBonus":"+$5.0 if processed less than 1 hour","Gateway":"MoneyGram","Sender":"YeVdx4cMLOeGOrR7skkuvalwI5oExg1Yb9S2hdMl8T1LiE1t","Recipient":"q/WtmxTyI5x6hvxWDKmYcj04xZ/O7PSdFzQF8OMSqVssfZrX","Description":"PMY16+ucUdK81JcLmhO4qDrAqrvIIRYbV5kNcORKDZhYs5Bv9Yzx4AOVKVHlD6zZsC/CcA==","Currency":"r5Pm1bNaHxUadIteGmCzXUaxFdAwZrwkewbXX18Cdw==","TransferCode":"45bCkb4cUn41/kJZcym19V8K1pie57gICtPQFc8gJA55OinTNy1xBJp7"}
+Marshaled JSON: {"ID":123,"Amount":15000,"CashPointAddress":"7001 E
+Belleview Ave, Denver, CO 80237, USA","ManagerBonus":"+$5.0 if
+processed less than 1 hour","Gateway":"MoneyGram",
+"Sender":"YeVdx4cMLOeGOrR7skkuvalwI5oExg1Yb9S2hdMl8T1LiE1t",
+"Recipient":"q/WtmxTyI5x6hvxWDKmYcj04xZ/O7PSdFzQF8OMSqVssfZrX",
+"Description":"PMY16+ucUdK81JcLmhO4qDrAqrvIIRYbV5kNcORKDZhYs5Bv9Yzx4AOVKVHlD6zZsC/CcA==",
+"Currency":"r5Pm1bNaHxUadIteGmCzXUaxFdAwZrwkewbXX18Cdw==",
+"TransferCode":"45bCkb4cUn41/kJZcym19V8K1pie57gICtPQFc8gJA55OinTNy1xBJp7"}
 
-Unmarshaled JSON: main.MoneyTransfer{ID:123, Amount:15000, CashPointAddress:"7001 E Belleview Ave, Denver, CO 80237, USA", ManagerBonus:"+$5.0 if processed less than 1 hour", Gateway:"MoneyGram", Sender:"John Doe", Recipient:"Jane Doe", Description:"Casio G Shock Retro 1986", Currency:"JPY", TransferCode:"L1K45M12XCBGAQ"}
+Unmarshaled JSON: main.MoneyTransfer{ID:123, Amount:15000,
+CashPointAddress:"7001 E Belleview Ave, Denver, CO 80237, USA",
+ManagerBonus:"+$5.0 if processed less than 1 hour",
+Gateway:"MoneyGram", Sender:"John Doe", Recipient:"Jane Doe",
+Description:"Casio G Shock Retro 1986", Currency:"JPY", TransferCode:"L1K45M12XCBGAQ"}
 ```
 
 as we see, the JSON string contains unencrypted data (ID, Amount, CashPointAddress,
