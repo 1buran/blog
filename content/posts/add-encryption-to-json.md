@@ -7,6 +7,7 @@ images:
 tags:
   - JSON
   - Golang
+  - closures
   - Encryption
   - AES
 ---
