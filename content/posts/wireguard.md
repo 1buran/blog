@@ -99,7 +99,7 @@ AllowedIPs = 0.0.0.0/0, ::/0
 
 (the last line will forward all trafic over the vpn)
 
-share qith QR code:
+share with QR code:
 
 ```
 qrencode -t ansiutf8 -r alice-laptop.conf
