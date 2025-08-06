@@ -80,11 +80,11 @@ Other
 Fundamentals:
 : Goroutines, channels, interfaces, generics, testing
 
+Architecture patterns/methodology:
+: SOLID, DDD, Clean Architecture
+
 TUI
 : bubbletea, lipgloss, termenv, gookit/color
-
-Web frameworks
-: Fiber
 
 Projects
 : [rHttp](https://github.com/1buran/rHttp), [workdiary](https://github.com/1buran/workdiary), [pigment](https://github.com/1buran/pigment)
