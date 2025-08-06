@@ -9,13 +9,10 @@ Name
 : Andrew Burdyug aka Buran
 
 IT experience
-: Since 2006
+: Since 2007
 
 Education
 : 2000-2005 Taurida National V.I.Vernadsky University, masters degree of applied physics
-
-E-mail
-: job-offer@cont4ct.org
 
 # GitHub/GitLab profiles
 
@@ -90,7 +87,7 @@ Web frameworks
 : Fiber
 
 Projects
-: [rHttp](https://github.com/1buran/rHttp)
+: [rHttp](https://github.com/1buran/rHttp), [workdiary](https://github.com/1buran/workdiary), [pigment](https://github.com/1buran/pigment)
 
 ## JavaScript
 
