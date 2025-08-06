@@ -11,8 +11,14 @@ theme = 'hermit-v2'
   [markup.highlight]
   style = 'nord'
 
+[params.dateform]
+  LongDate = "Jan 2, 2006"
+  ShortDate = "Jan 2"
+  NumDateShort = "2006-01-02"
+  NumDateLong = "2006-01-02 15:04 -0700"
+
 [params]
-  dateform        = "Jan 2, 2006"
+  # dateform        = "Jan 2, 2006"
   dateformShort   = "Jan 2"
   dateformNum     = "2006-01-02"
   dateformNumTime = "2006-01-02 15:04 -0700"
