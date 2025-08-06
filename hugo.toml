@@ -9,7 +9,12 @@ theme = 'hermit-v2'
 
 [markup]
   [markup.highlight]
-  style = 'nord'
+    style = 'nord'
+
+  [markup.tableOfContents]
+    endLevel = 3
+    ordered = false
+    startLevel = 2
 
 [params.dateform]
   LongDate = "Jan 2, 2006"

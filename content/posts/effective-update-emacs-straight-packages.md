@@ -2,7 +2,7 @@
 title: "Effective Update Emacs Straight Packages"
 date: 2023-11-05T19:59:25+03:00
 draft: false
-toc: false
+toc: true
 images:
 tags:
   - Emacs

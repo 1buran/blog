@@ -2,7 +2,7 @@
 title: "Add Encryption to Json"
 date: 2024-07-25T11:00:18+03:00
 draft: false
-toc: false
+toc: true
 images:
 tags:
   - JSON

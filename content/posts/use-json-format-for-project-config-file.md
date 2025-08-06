@@ -2,7 +2,7 @@
 title: "Use JSON format for project config file"
 date: 2024-04-22T00:59:58+03:00
 draft: false
-toc: false
+toc: true
 images:
 tags:
   - Golang
